@@ -37,8 +37,8 @@ data_cadastro datetime NOT NULL,
 login_cadastro varchar(15) NOT NULL
 );
 
--- Adicionando chaves estrangeiras, ou melhor, relacionando 2 tabelas. (Informando ao SQL quais colunas s�o chaves estrangeiras). 
-ALTER TABLE Turmas ADD CONSTRAINT fk_Alunos FOREIGN KEY(id_aluno) REFERENCES Alunos(id_aluno);
+-- Adicionando chaves estrangeiras, ou melhor, relacionando 2 tabelas. (Informando ao SQL quais colunas são chaves estrangeiras). 
+ALTER TABLE Turmas ADD CONSTRAINT fk_Alunos FOREIGN KEY(id_aluno) REFERENCES Alunos(id_aluno); -- Altera a tabela Turmas criando uma constraint do tipo foreign key(entre parentes estará a coluna  que fara ligação com a coluna de outra tabela) que vai referenciar a um outro campo da tabela alunos(campo entre parênteses), ou seja, o id_aluno da tabela Turmas irá referenciar o id_aluno da tabela Aluno, virando assim uma chave estrangeira. 
 ALTER TABLE Turmas ADD CONSTRAINT fk_Cursos FOREIGN KEY(id_curso) REFERENCES Cursos(id_curso);
 
 CREATE TABLE Registro_presenca
@@ -51,7 +51,7 @@ data_cadastro datetime NOT NULL,
 login_cadastro varchar(15) NOT NULL
 );
 
---Informando ao SQL quais colunas s�o chaves estrangeiras
+--Informando ao SQL quais colunas são chaves estrangeiras
 ALTER TABLE Registro_presenca ADD CONSTRAINT fk_turmasRP FOREIGN KEY(id_turma) REFERENCES Turmas(id_turma);
 ALTER TABLE Registro_presenca ADD CONSTRAINT fk_alunosRP FOREIGN KEY(id_aluno) REFERENCES Alunos(id_aluno);
 ALTER TABLE Registro_presenca ADD CONSTRAINT fk_situacaoRP FOREIGN KEY(id_situacao) REFERENCES Situacao(id_situacao);
