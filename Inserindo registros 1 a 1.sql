@@ -9,7 +9,7 @@ INSERT INTO dbo.Alunos
 VALUES
 (2, 'Alessandro Soares', '4/10/1989', 'M', '03/08/2022 10:54:00', 'CARLACAROLINECS')
 
-Select * from dbo.Alunos -- Mostra os dados que foram inseridos na tabela Alunos
+Select * from dbo.Alunos -- Mostra os dados que est√£o inseridos na tabela Alunos
  
 
 
@@ -28,11 +28,11 @@ Select * from dbo.Cursos -- Mostra os dados que foram inseridos na tabela Cursos
 
 
 
--- Adicionando 3 linhas na tabela SituaÁ„o:
+-- Adicionando 3 linhas na tabela Situa√ß√£o:
 INSERT INTO dbo.Situacao
 (id_situacao, situacao, data_cadastro, login_cadastro)
 VALUES
-(1, 'PresenÁa Confirmada', '03/08/2022 10:54:00', 'CARLACAROLINECS')
+(1, 'Presen√ßa Confirmada', '03/08/2022 10:54:00', 'CARLACAROLINECS')
 
 INSERT INTO dbo.Situacao
 (id_situacao, situacao, data_cadastro, login_cadastro)
@@ -44,10 +44,10 @@ INSERT INTO dbo.Situacao
 VALUES
 (3, 'Ausente com Justificativa', '03/08/2022 10:54:00', 'CARLACAROLINECS')
 
-Select * from dbo.Situacao -- Mostra os dados que foram inseridos na tabela SituaÁ„o
+Select * from dbo.Situacao -- Mostra os dados que foram inseridos na tabela Situa√ß√£o
 
 
---ObservaÁ„o:
+--Observa√ß√£o:
 
 -- Utilizado para deletar registros individualmente.
 DELETE FROM dbo.Alunos
